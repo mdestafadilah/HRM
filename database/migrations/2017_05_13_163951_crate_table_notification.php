@@ -18,6 +18,7 @@ class CrateTableNotification extends Migration
             $table->string('title');
             $table->string('value');
             $table->enum('notiType',['collection','due','tolet']);
+            $table->enum('isRead',[1,0])->default('0');
             $table->timestamps();
 
 

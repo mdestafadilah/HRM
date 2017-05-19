@@ -470,7 +470,6 @@ toastr.warning('{{Session::get("warning")["body"]}}','{{Session::get("success")[
 
         window.setInterval(function(){
             var d = new Date();
-
             console.log(d);
             fetchAllNotifications();
 

@@ -471,7 +471,6 @@ toastr.warning('<?php echo e(Session::get("warning")["body"]); ?>','<?php echo e
 
         window.setInterval(function(){
             var d = new Date();
-
             console.log(d);
             fetchAllNotifications();
 
