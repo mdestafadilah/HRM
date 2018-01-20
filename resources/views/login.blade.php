@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HRM- Login</title>
+	<title>CPM- Login</title>
 
 	<!-- BEGIN META -->
 	<meta charset="utf-8">
@@ -44,7 +44,7 @@
 					<div class="col-sm-3"></div>
 					<div class="col-sm-6">
 						<br/>
-						<span class="text-lg text-bold text-primary">House Rent Management</span>
+						<span class="text-lg text-bold text-primary">Cloud Base Property Management[CPM]</span>
 						<br/><br/>
 						<form class="form floating-label" action="{{URL::Route('user.login')}}" accept-charset="utf-8" method="post">
 							 {{ csrf_field() }}

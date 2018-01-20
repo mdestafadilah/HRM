@@ -13,8 +13,8 @@
     <section>
         <div class="section-header">
             <ol class="breadcrumb">
-                <li class="active">Rent</li>
-                <li><a href="{{URL::Route('rent.create')}}">New rent</a></li>
+                <li class="active">Sale</li>
+                <li><a href="{{URL::Route('rent.create')}}">New sale</a></li>
             </ol>
         </div><!--end .section-header -->
         <div class="section-body">
@@ -24,7 +24,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-head style-primary">
-                                    <header>Rent List</header>
+                                    <header>Sales List</header>
                                 </div>
                                 <div class="card-body no-padding">
                                     <div class="table-responsive no-margin">
@@ -35,10 +35,10 @@
                                                 <th  class="text-center">Project</th>
                                                 <th  class="text-center">Flat</th>
                                                 <th  class="text-center">Customer</th>
-                                                <th class="text-center">Rent</th>
-                                                <th class="text-center">Service</th>
-                                                <th  class="text-center">Rend Date</th>
-                                                <th  class="text-center">Period</th>
+                                                <th class="text-center">Amount</th>
+                                                {{--<th class="text-center">Service</th>--}}
+                                                <th  class="text-center">Sale Date</th>
+                                                {{--<th  class="text-center">Period</th>--}}
                                                 {{--<th class="text-center">Entry By</th>--}}
                                                 <th class="text-center">Status</th>
                                                 <th  class="text-center">Action</th>
@@ -52,11 +52,11 @@
                                                     <td>{{$rent->flat->description}}</td>
                                                     <td>{{$rent->customer->name}} [{{$rent->customer->cellNo}}]</td>
                                                     <td>{{$rent->rent}}</td>
-                                                    <td>{{$rent->serviceCharge}}</td>
+{{--                                                    <td>{{$rent->serviceCharge}}</td>--}}
                                                     <td>{{$rent->entryDate->format('d/m/Y')}}</td>
-                                                    <td>
-                                                        {{$rent->deedStart->format('F,Y')}} to {{$rent->deedEnd->format('F,Y')}}
-                                                    </td>
+                                                    {{--<td>--}}
+                                                        {{--{{$rent->deedStart->format('F,Y')}} to {{$rent->deedEnd->format('F,Y')}}--}}
+                                                    {{--</td>--}}
                                                     {{--<td>{{$rent->entry->name}}</td>--}}
                                                     <td>
                                                         @if($rent->status == 1)

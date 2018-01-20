@@ -10,7 +10,7 @@
     <section>
         <div class="section-header">
             <ol class="breadcrumb">
-                <li><a href="{{URL::Route('rent.index')}}">Rented List</a></li>
+                <li><a href="{{URL::Route('rent.index')}}">Sales List</a></li>
                 <li class="active">Create</li>
             </ol>
         </div><!--end .section-header -->
@@ -28,7 +28,7 @@
 
                                 <div class="card">
                                     <div class="card-head style-primary">
-                                        <header>Add New Rent</header>
+                                        <header>Add New Sale</header>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
@@ -73,27 +73,27 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control datepicker" value="{{$today->format('d/m/Y')}}" name="entryDate" required>
-                                                            <label for="dateOfEntry">Rent date</label>
+                                                            <label for="dateOfEntry">Sale date</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-4 hide">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control datepicker2" value="" name="deedStart" required>
+                                                            <input type="text" class="form-control datepicker2" value="{{$today->format('m-Y')}}" name="deedStart" required>
                                                             <label for="deedStart">Period start month</label>
                                                         </div>
-                                                    </div> <div class="col-lg-3">
+                                                    </div> <div class="col-lg-4 hide">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control datepicker2" value="" name="deedEnd" required>
+                                                            <input type="text" class="form-control datepicker2" value="{{$today->format('m-Y')}}" name="deedEnd" required>
                                                             <label for="deedEnd">Period end month</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <input type="text" readonly class="form-control" id="rentNo" value="{{$rentNo}}" name="rentNo" required>
-                                                            <label for="rentNo">Rent No</label>
+                                                            <label for="rentNo">Sale No</label>
                                                         </div>
                                                     </div>
 
@@ -102,11 +102,11 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <input type="number" id="rentAmount" class="form-control" min="0" name="rent" data-rule-number="true" required>
-                                                            <label for="rentAmount">Rent amount</label>
+                                                            <label for="rentAmount">Sale amount</label>
                                                             <p class="help-block">Numbers only</p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 hide">
                                                         <div class="form-group">
                                                             <input type="number"  id="rentAmountPerSft" class="form-control" min="0" name="perSftRent" data-rule-number="true" required>
                                                             <label for="rentAmount">Per Sft. rent</label>
@@ -114,23 +114,23 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row hide">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <input type="number" id="securityMoney" class="form-control" min="0" name="securityMoney" data-rule-number="true" required>
+                                                            <input type="number" id="securityMoney" class="form-control" value="0.00" min="0" name="securityMoney" data-rule-number="true" required>
                                                             <label for="securityMoney">Security money</label>
                                                             <p class="help-block">Numbers only</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <input type="number" id="serviceCharge" class="form-control" min="0" name="serviceCharge" data-rule-number="true" required>
+                                                            <input type="number" id="serviceCharge" class="form-control" value="0.00" min="0" name="serviceCharge" data-rule-number="true" required>
                                                             <label for="serviceCharge">Service Charge</label>
                                                             <p class="help-block">Numbers only</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row hide">
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <input type="number" id="advanceMoney" class="form-control" min="0" value="0.00" name="advanceMoney" data-rule-number="true" required>
@@ -154,7 +154,7 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="row">
+                                                <div class="row hide">
                                                     <div class="col-lg-4">
                                                         <div class="form-group">
                                                             <input type="number" id="utilityCharge" class="form-control" min="0" value="0.00" name="utilityCharge" data-rule-number="true" required>

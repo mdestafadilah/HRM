@@ -72,7 +72,7 @@ class RentController extends Controller
         $flat = Flat::where('id',$data['flats_id'])->first();
         $flat->status = 1;
         $flat->save();
-        $notification= array('title' => 'Data Store', 'body' => 'Flat rented Successfully');
+        $notification= array('title' => 'Data Store', 'body' => 'Flat Sale Successfully');
         return redirect()->route('rent.index')->with('success',$notification);
     }
 

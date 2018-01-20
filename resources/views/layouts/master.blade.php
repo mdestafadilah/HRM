@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>RHM - @yield("title")</title>
+	<title>CPM - @yield("title")</title>
 	<!-- BEGIN META -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +61,7 @@
 				<li class="header-nav-brand" >
 					<div class="brand-holder">
 						<a href="{{URL::Route('user.dashboard')}}">
-							<span class="text-lg text-bold text-primary">Rent & Housing Manage</span>
+							<span class="text-lg text-bold text-primary">Property Management</span>
 						</a>
 					</div>
 				</li>
@@ -162,7 +162,7 @@
 			</div>
 			<div class="expanded">
 				<a href="{{URL::Route('user.dashboard')}}">
-					<span class="text-lg text-bold text-primary ">Rent&nbsp;Housing Manage</span>
+					<span class="text-lg text-bold text-primary ">CP&nbsp;M</span>
 				</a>
 			</div>
 		</div>
@@ -243,7 +243,7 @@
 				<li class="gui-folder">
 					<a>
 						<div class="gui-icon"><i class="md md-markunread-mailbox"></i></div>
-						<span class="title">Rent</span>
+						<span class="title">Sales</span>
 					</a>
 					<!--start submenu -->
 					<ul>
@@ -287,36 +287,34 @@
 						</a>
 						<!--start submenu -->
 						<ul>
-							@if(Gate::check('report.projects'))
-								<li><a href="{{URL::Route('report.projects')}}" ><span class="title">Projects</span></a></li>
-							@endif
-							@if(Gate::check('report.flats'))
-								<li><a href="{{URL::Route('report.flats')}}" ><span class="title">Flats</span></a></li>
-							@endif
-							@if(Gate::check('report.customers'))
-								<li><a href="{{URL::Route('report.customers')}}" ><span class="title">Cutomers</span></a></li>
-							@endif
-							@if(Gate::check('report.rents'))
-								<li><a href="{{URL::Route('report.rents')}}" ><span class="title">Rents</span></a></li>
-							@endif
-							@if(Gate::check('report.collections'))
-								<li><a href="{{URL::Route('report.collections')}}" ><span class="title">Collections</span></a></li>
-							@endif
-							@if(Gate::check('report.collectionSummary'))
-								<li><a href="{{URL::Route('report.collectionSummary')}}" ><span class="title">Collection Summary</span></a></li>
-							@endif
+							{{--@if(Gate::check('report.projects'))--}}
+								{{--<li><a href="{{URL::Route('report.projects')}}" ><span class="title">Projects</span></a></li>--}}
+							{{--@endif--}}
+							{{--@if(Gate::check('report.flats'))--}}
+								{{--<li><a href="{{URL::Route('report.flats')}}" ><span class="title">Flats</span></a></li>--}}
+							{{--@endif--}}
+							{{--@if(Gate::check('report.customers'))--}}
+								{{--<li><a href="{{URL::Route('report.customers')}}" ><span class="title">Cutomers</span></a></li>--}}
+							{{--@endif--}}
+							{{--@if(Gate::check('report.rents'))--}}
+								{{--<li><a href="{{URL::Route('report.rents')}}" ><span class="title">Rents</span></a></li>--}}
+							{{--@endif--}}
+							{{--@if(Gate::check('report.collections'))--}}
+								{{--<li><a href="{{URL::Route('report.collections')}}" ><span class="title">Collections</span></a></li>--}}
+							{{--@endif--}}
+							{{--@if(Gate::check('report.collectionSummary'))--}}
+								{{--<li><a href="{{URL::Route('report.collectionSummary')}}" ><span class="title">Collection Summary</span></a></li>--}}
+							{{--@endif--}}
 								@if(Gate::check('report.dues'))
-								<li><a href="{{URL::Route('report.dues')}}" ><span class="title">Collection Dues</span></a></li>
+								<li><a href="{{URL::Route('report.dues')}}" ><span class="title" style="font-size: 12px;">Collection Forecasting</span></a></li>
 							@endif
 							@if(Gate::check('report.expenses'))
-								<li><a href="{{URL::Route('report.expenses')}}" ><span class="title">Expenses</span></a></li>
+								<li><a href="{{URL::Route('report.expenses')}}" ><span class="title" style="font-size: 12px;">Month Wise Receivable</span></a></li>
 							@endif
 							@if(Gate::check('report.balance'))
-								<li><a href="{{URL::Route('report.balance')}}" ><span class="title">Account Balance</span></a></li>
+								<li><a href="{{URL::Route('report.balance')}}" ><span class="title" style="font-size: 12px;">Customer Payment Status</span></a></li>
 							@endif
-								@if(Gate::check('report.rentalStatus'))
-									<li><a href="{{URL::Route('report.rentalStatus')}}" ><span class="title">Rental Status</span></a></li>
-								@endif
+
 						</ul><!--end /submenu -->
 					</li><!--end /menu-li -->
 					<!-- END REPORT -->
@@ -339,7 +337,7 @@
 
 			<div class="menubar-foot-panel">
 				<small class="no-linebreak hidden-folded">
-					<span class="opacity-75">Copyright &copy; 2017</span> <strong>sagproperty</strong>
+					<span class="opacity-75">Copyright &copy; 2018</span> <strong>aakash<small>&trade;</small></strong>
 				</small>
 			</div>
 		</div><!--end .menubar-scroll-panel-->

@@ -11,7 +11,7 @@
     <section>
         <div class="section-header">
             <ol class="breadcrumb">
-                <li><a href="{{URL::Route('rent.index')}}">Rented List</a></li>
+                <li><a href="{{URL::Route('rent.index')}}">Sales List</a></li>
                 <li class="active">Update</li>
             </ol>
         </div><!--end .section-header -->
@@ -29,7 +29,7 @@
 
                                 <div class="card">
                                     <div class="card-head style-primary">
-                                        <header>Update rent</header>
+                                        <header>Update Sale</header>
                                     </div>
                                     <div class="card-body">
 
@@ -38,7 +38,7 @@
 
                                             {{ csrf_field() }}
                                             {{ method_field('PATCH') }}
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-4 hide">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control datepicker" name="deedEnd" value="{{$rent->deedEnd->format('m-Y')}}" required>
                                                     <label for="deedEnd">Period end date</label>
@@ -48,18 +48,18 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input type="number" id="rentAmount" value="{{$rent->rent}}" class="form-control" min="0" name="rent" data-rule-number="true" required>
-                                                    <label for="rentAmount">Rent amount</label>
+                                                    <label for="rentAmount">Sale amount</label>
                                                     <p class="help-block">Numbers only</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-4 hide">
                                                 <div class="form-group">
                                                     <input type="number" id="rentAmountPerSft" value="{{$rent->perSftRent}}" class="form-control" min="0" name="perSftRent" data-rule-number="true" required>
                                                     <p class="help-block">Rent per Sft.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row hide">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <input type="number" id="securityMoney" value="{{$rent->securityMoney}}" class="form-control" min="0" name="securityMoney" data-rule-number="true" required>
@@ -76,7 +76,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="row">
+                                        <div class="row hide">
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input type="number" id="advanceMoney" value="{{$rent->advanceMoney}}" class="form-control" min="0" name="advanceMoney" data-rule-number="true" required>
@@ -99,7 +99,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row hide">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <input type="number" id="utilityCharge" value="{{$rent->utilityCharge}}" class="form-control" min="0" name="utilityCharge" data-rule-number="true" required>

@@ -156,7 +156,7 @@
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-lg-4">
+                                                    <div class="col-lg-4 hide">
                                                         <div class="form-group">
                                                             <p style="padding-top: 30px;">
                                                                 <label class="checkbox-styled checkbox-primary">
@@ -181,18 +181,18 @@
                                             <div class="col-lg-4">
                                                 <div class="card" id="flatInfo">
                                                     <div class="card-head style-info">
-                                                        <header>Rent Information</header>
+                                                        <header>Sales Information</header>
                                                     </div>
                                                     <div class="card-body">
                                                         <ul class="list-divided">
-                                                            <li>Rent : <strong><span class="opacity-90" id="rentAmount"></span></strong></li>
-                                                            <li>Service Charge : <strong><span class="opacity-90" id="serviceCharge"></span></strong></li>
-                                                            <li>Security Money : <strong><span class="opacity-90" id="securityMoney"></span></strong></li>
-                                                            <li>Advance Money : <strong><span class="opacity-90" id="advanceMoney"></span></strong></li>
-                                                            <li>Deduction Advance TK: <strong><span class="opacity-90" id="monthlyDeduction"></span></strong></li>
-                                                            <li>Deduction Tax TK : <strong><span class="opacity-90" id="monthlyDeductionTax"></span></strong></li>
-                                                            <li>Utility Charge : <strong><span class="opacity-90" id="utilityCharge"></span></strong></li>
-                                                            <li>Delay Charge : <strong><span class="opacity-90" id="delayCharge"></span></strong></li>
+                                                            <li>Amount : <strong><span class="opacity-90" id="rentAmount"></span></strong></li>
+                                                            <li class="hide">Service Charge : <strong><span class="opacity-90" id="serviceCharge"></span></strong></li>
+                                                            <li class="hide">Security Money : <strong><span class="opacity-90" id="securityMoney"></span></strong></li>
+                                                            <li class="hide">Advance Money : <strong><span class="opacity-90" id="advanceMoney"></span></strong></li>
+                                                            <li class="hide">Deduction Advance TK: <strong><span class="opacity-90" id="monthlyDeduction"></span></strong></li>
+                                                            <li class="hide">Deduction Tax TK : <strong><span class="opacity-90" id="monthlyDeductionTax"></span></strong></li>
+                                                            <li class="hide">Utility Charge : <strong><span class="opacity-90" id="utilityCharge"></span></strong></li>
+                                                            <li class="hide">Delay Charge : <strong><span class="opacity-90" id="delayCharge"></span></strong></li>
                                                             <li>Remarks :<br/><span class="opacity-90" id="note"></span></li>
                                                       </ul>
                                                     </div>
